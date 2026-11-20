@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-forest: #163D2B;
+    --color-botanical: #315B3B;
+    --color-cream: #F5F0E5;
+    --color-terracotta: #A95732;
+    --color-gold: #C7A66A;
+    --color-charcoal: #242821;
+  }
+
+  html {
+    background-color: #163D2B;
+    color: #F5F0E5;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: #163D2B;
+  }
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0F2B1E;
+}
+::-webkit-scrollbar-thumb {
+  background: #C7A66A;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D8BC86;
+}
+
+/* Glassmorphism Utilities without harsh yellow borders */
+.glass-panel {
+  background: rgba(20, 38, 28, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.glass-panel-subtle {
+  background: rgba(16, 28, 20, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.glass-panel-gold {
+  background: rgba(31, 65, 45, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Editorial Serif & Typography Accents */
+.font-display {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+}
+
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Golden Gradients & Vignettes */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #F5F0E5 0%, #C7A66A 50%, #D8BC86 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.terracotta-text-gradient {
+  background: linear-gradient(135deg, #F5F0E5 0%, #C26A41 60%, #A95732 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Noise Texture Overlay */
+.bg-noise {
+  background-image: radial-gradient(rgba(199, 166, 106, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
