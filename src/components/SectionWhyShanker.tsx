@@ -180,18 +180,18 @@ export const SectionWhyShanker: React.FC = () => {
           className="h-screen w-full flex flex-col justify-center px-4 sm:px-8 md:px-12 xl:px-16 2xl:px-20 overflow-hidden z-20"
         >
           {/* Integrated Editorial Section Header - Full Wide Stretched */}
-          <div className="w-full max-w-[96vw] xl:max-w-[94vw] 2xl:max-w-[92vw] mx-auto mb-4 md:mb-6 pt-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#1A3826] text-[#F7CE68] text-[11px] uppercase tracking-[0.25em] mb-2 font-medium shadow-sm">
+          <div className="w-full max-w-[96vw] xl:max-w-[94vw] 2xl:max-w-[92vw] mx-auto mb-2 sm:mb-4 md:mb-6 pt-2 sm:pt-4">
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-0.5 sm:py-1 rounded-full bg-[#1A3826] text-[#F7CE68] text-[10px] sm:text-[11px] uppercase tracking-[0.25em] mb-1 sm:mb-2 font-medium shadow-sm">
               <Sparkles className="w-3 h-3" />
               <span>Philosophy & Botanical Science</span>
             </div>
 
-            <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl xl:text-6xl font-light text-[#F5F0E5] tracking-wide mb-1 leading-tight">
+            <h2 className="font-serif text-xl sm:text-3xl md:text-5xl xl:text-6xl font-light text-[#F5F0E5] tracking-wide mb-1 leading-tight">
               Why Choose Shanker Tea?
             </h2>
 
             <p 
-              className="font-editorial italic text-base sm:text-xl md:text-2xl xl:text-3xl font-medium"
+              className="font-editorial italic text-sm sm:text-lg md:text-2xl xl:text-3xl font-medium"
               style={{ color: '#F7CE68', textShadow: '0 2px 14px rgba(0,0,0,0.85)' }}
             >
               “Because every cup should feel worth remembering.”
@@ -199,13 +199,13 @@ export const SectionWhyShanker: React.FC = () => {
           </div>
 
           {/* Grand Showcase Row: 7-5 Balanced Grid */}
-          <div className="w-full max-w-[96vw] xl:max-w-[94vw] 2xl:max-w-[92vw] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 xl:gap-14 items-center">
+          <div className="w-full max-w-[96vw] xl:max-w-[94vw] 2xl:max-w-[92vw] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-3 sm:gap-6 lg:gap-10 xl:gap-14 items-center">
             
             {/* =====================================================================
                 LEFT SIDE: DYNAMIC BENEFITS IMAGE STAGE (CROSS-FADES ON SCROLL)
                 ===================================================================== */}
             <div className="lg:col-span-7 xl:col-span-7 flex items-center justify-center lg:justify-start relative">
-              <div className="relative w-full max-w-xl lg:max-w-2xl xl:max-w-[680px] 2xl:max-w-[740px] aspect-[16/10] sm:aspect-[16/9] flex items-center justify-center">
+              <div className="relative w-full max-w-[280px] sm:max-w-md lg:max-w-2xl xl:max-w-[680px] 2xl:max-w-[740px] max-h-[28vh] sm:max-h-[35vh] lg:max-h-none aspect-[16/10] sm:aspect-[16/9] flex items-center justify-center">
                 {benefits.map((benefit) => (
                   <div
                     key={`img-${benefit.id}`}
@@ -227,7 +227,7 @@ export const SectionWhyShanker: React.FC = () => {
                 ===================================================================== */}
             <div 
               ref={textStageRef}
-              className="lg:col-span-5 xl:col-span-5 relative h-[260px] sm:h-[280px] xl:h-[300px] flex items-center pl-2 lg:pl-4 xl:pl-8"
+              className="lg:col-span-5 xl:col-span-5 relative h-[180px] sm:h-[220px] md:h-[260px] xl:h-[300px] flex items-center pl-1 sm:pl-2 lg:pl-4 xl:pl-8"
             >
               {benefits.map((benefit) => {
                 return (
@@ -236,20 +236,20 @@ export const SectionWhyShanker: React.FC = () => {
                     className="benefit-slide-text absolute inset-0 flex flex-col justify-center"
                   >
                     {/* Main Clean Heading (NO annoying 01/03 badge) */}
-                    <h3 className="font-serif text-2xl sm:text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-light text-[#F5F0E5] tracking-wide mb-3 leading-tight">
+                    <h3 className="font-serif text-lg sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-light text-[#F5F0E5] tracking-wide mb-1.5 sm:mb-2.5 leading-tight">
                       {benefit.heading}
                     </h3>
 
                     {/* Golden Italic Subtitle Explaining the Benefit */}
                     <p 
-                      className="font-editorial italic text-base sm:text-lg lg:text-lg xl:text-xl 2xl:text-2xl mb-3 font-medium leading-snug"
+                      className="font-editorial italic text-xs sm:text-base md:text-lg xl:text-xl 2xl:text-2xl mb-1.5 sm:mb-2.5 font-medium leading-snug"
                       style={{ color: '#F7CE68', textShadow: '0 2px 14px rgba(0,0,0,0.85)' }}
                     >
                       {benefit.subtitle}
                     </p>
 
                     {/* Clean 2-Liner Explanation */}
-                    <p className="text-sm sm:text-base lg:text-base xl:text-lg text-[#F5F0E5]/80 font-light leading-relaxed max-w-lg">
+                    <p className="text-xs sm:text-sm md:text-base xl:text-lg text-[#F5F0E5]/80 font-light leading-relaxed max-w-lg">
                       {benefit.description}
                     </p>
                   </div>

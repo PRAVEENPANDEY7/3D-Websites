@@ -127,100 +127,100 @@ export const SectionExperience: React.FC = () => {
           ref={showcaseRef}
           className="grid grid-cols-1 lg:grid-cols-12 gap-8 xl:gap-14 items-center w-full"
         >
-          {/* Left Side: 2 Unboxed Elegant Texts pushed towards left */}
+          {/* Center: Grand Cup (On Mobile, appears first right below header) */}
+          <div className="order-1 lg:order-2 lg:col-span-6 xl:col-span-6 flex flex-col items-center justify-center relative my-2 lg:my-0">
+            <img
+              ref={imageRef}
+              src="/assets/images/steaming-chai-leaf-swirl.png"
+              alt="Steaming Chai with Leaf Swirl"
+              className="w-full max-w-[280px] sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl h-auto object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.95)]"
+              loading="lazy"
+            />
+          </div>
+
+          {/* Left Side: 2 Unboxed Elegant Texts */}
           <div 
             ref={leftColRef} 
-            className="lg:col-span-3 xl:col-span-3 space-y-12 lg:space-y-20 flex flex-col justify-center text-left"
+            className="order-2 lg:order-1 lg:col-span-3 xl:col-span-3 space-y-8 sm:space-y-12 lg:space-y-20 flex flex-col justify-center text-left"
           >
             {/* Note 01 */}
-            <div className="space-y-3">
+            <div className="space-y-2.5 sm:space-y-3">
               <div className="flex items-center gap-2 text-[#F7CE68]">
                 <Flame className="w-4 h-4" />
-                <span className="text-[11px] font-mono uppercase tracking-[0.25em] font-bold">
+                <span className="text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.25em] font-bold">
                   SENSORY NOTE 01
                 </span>
               </div>
-              <h3 className="font-serif text-2xl xl:text-3xl font-normal text-[#F5F0E5] leading-snug">
+              <h3 className="font-serif text-xl sm:text-2xl xl:text-3xl font-normal text-[#F5F0E5] leading-snug">
                 Earthen Kulhad Porosity
               </h3>
-              <p className="text-xs uppercase font-mono tracking-wider text-[#F7CE68]/90 font-semibold">
+              <p className="text-[11px] sm:text-xs uppercase font-mono tracking-wider text-[#F7CE68]/90 font-semibold">
                 Mitti Ki Khushboo
               </p>
-              <p className="text-sm xl:text-base text-[#F5F0E5]/80 font-light leading-relaxed">
+              <p className="text-xs sm:text-sm xl:text-base text-[#F5F0E5]/80 font-light leading-relaxed">
                 Unglazed clay pores breathe organic minerals into hot tea, releasing the timeless nostalgic warmth of summer rain on Indian soil.
               </p>
             </div>
 
             {/* Note 02 */}
-            <div className="space-y-3">
+            <div className="space-y-2.5 sm:space-y-3">
               <div className="flex items-center gap-2 text-[#F7CE68]">
                 <Sun className="w-4 h-4" />
-                <span className="text-[11px] font-mono uppercase tracking-[0.25em] font-bold">
+                <span className="text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.25em] font-bold">
                   SENSORY NOTE 02
                 </span>
               </div>
-              <h3 className="font-serif text-2xl xl:text-3xl font-normal text-[#F5F0E5] leading-snug">
+              <h3 className="font-serif text-xl sm:text-2xl xl:text-3xl font-normal text-[#F5F0E5] leading-snug">
                 First Flush Shoots
               </h3>
-              <p className="text-xs uppercase font-mono tracking-wider text-[#F7CE68]/90 font-semibold">
+              <p className="text-[11px] sm:text-xs uppercase font-mono tracking-wider text-[#F7CE68]/90 font-semibold">
                 Tender High-Altitude Leaves
               </p>
-              <p className="text-sm xl:text-base text-[#F5F0E5]/80 font-light leading-relaxed">
+              <p className="text-xs sm:text-sm xl:text-base text-[#F5F0E5]/80 font-light leading-relaxed">
                 Tender two-leaves-and-a-bud hand-plucked in dawn mountain mist, preserving delicate muscatel floral sweetness and golden amber liquor.
               </p>
             </div>
           </div>
 
-          {/* Center: Grand, Large Cup commanding the center stage */}
-          <div className="lg:col-span-6 xl:col-span-6 flex flex-col items-center justify-center relative my-4 lg:my-0">
-            <img
-              ref={imageRef}
-              src="/assets/images/steaming-chai-leaf-swirl.png"
-              alt="Steaming Chai with Leaf Swirl"
-              className="w-full max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl h-auto object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.95)]"
-              loading="lazy"
-            />
-          </div>
-
-          {/* Right Side: 2 Unboxed Elegant Texts pushed towards right */}
+          {/* Right Side: 2 Unboxed Elegant Texts */}
           <div 
             ref={rightColRef} 
-            className="lg:col-span-3 xl:col-span-3 space-y-12 lg:space-y-20 flex flex-col justify-center text-left"
+            className="order-3 lg:order-3 lg:col-span-3 xl:col-span-3 space-y-8 sm:space-y-12 lg:space-y-20 flex flex-col justify-center text-left"
           >
             {/* Note 03 */}
-            <div className="space-y-3">
+            <div className="space-y-2.5 sm:space-y-3">
               <div className="flex items-center gap-2 text-[#F7CE68]">
                 <Droplets className="w-4 h-4" />
-                <span className="text-[11px] font-mono uppercase tracking-[0.25em] font-bold">
+                <span className="text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.25em] font-bold">
                   SENSORY NOTE 03
                 </span>
               </div>
-              <h3 className="font-serif text-2xl xl:text-3xl font-normal text-[#F5F0E5] leading-snug">
+              <h3 className="font-serif text-xl sm:text-2xl xl:text-3xl font-normal text-[#F5F0E5] leading-snug">
                 Slow Simmer Alchemy
               </h3>
-              <p className="text-xs uppercase font-mono tracking-wider text-[#F7CE68]/90 font-semibold">
+              <p className="text-[11px] sm:text-xs uppercase font-mono tracking-wider text-[#F7CE68]/90 font-semibold">
                 Artisanal Spiced Milk
               </p>
-              <p className="text-sm xl:text-base text-[#F5F0E5]/80 font-light leading-relaxed">
+              <p className="text-xs sm:text-sm xl:text-base text-[#F5F0E5]/80 font-light leading-relaxed">
                 A patient rolling boil where whole milk gently marries crushed green cardamom pods, fresh ginger root, and robust malty leaves.
               </p>
             </div>
 
             {/* Note 04 */}
-            <div className="space-y-3">
+            <div className="space-y-2.5 sm:space-y-3">
               <div className="flex items-center gap-2 text-[#F7CE68]">
                 <Wind className="w-4 h-4" />
-                <span className="text-[11px] font-mono uppercase tracking-[0.25em] font-bold">
+                <span className="text-[10px] sm:text-[11px] font-mono uppercase tracking-[0.25em] font-bold">
                   SENSORY NOTE 04
                 </span>
               </div>
-              <h3 className="font-serif text-2xl xl:text-3xl font-normal text-[#F5F0E5] leading-snug">
+              <h3 className="font-serif text-xl sm:text-2xl xl:text-3xl font-normal text-[#F5F0E5] leading-snug">
                 Mindful Presence
               </h3>
-              <p className="text-xs uppercase font-mono tracking-wider text-[#F7CE68]/90 font-semibold">
+              <p className="text-[11px] sm:text-xs uppercase font-mono tracking-wider text-[#F7CE68]/90 font-semibold">
                 Slow Chai Meditation
               </p>
-              <p className="text-sm xl:text-base text-[#F5F0E5]/80 font-light leading-relaxed">
+              <p className="text-xs sm:text-sm xl:text-base text-[#F5F0E5]/80 font-light leading-relaxed">
                 Holding warm unglazed terracotta with both hands creates an instant sensory grounding pause in the midst of everyday rush.
               </p>
             </div>

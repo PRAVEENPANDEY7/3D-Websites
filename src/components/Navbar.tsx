@@ -55,26 +55,26 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInquiry }) => {
     <>
       {/* Truly Transparent Glass Navbar */}
       <nav 
-        className="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl transition-all duration-300"
+        className="fixed top-3 sm:top-4 md:top-6 left-1/2 -translate-x-1/2 z-50 w-[94%] sm:w-[95%] max-w-7xl transition-all duration-300"
       >
         <div 
-          className={`flex items-center justify-between px-6 md:px-8 py-3 rounded-2xl transition-all duration-300 ${
+          className={`flex items-center justify-between px-3.5 sm:px-6 md:px-8 py-2.5 sm:py-3 rounded-2xl transition-all duration-300 ${
             scrolled 
-              ? 'bg-black/25 backdrop-blur-md border border-white/15 shadow-xl shadow-black/40' 
+              ? 'bg-black/35 backdrop-blur-md border border-white/15 shadow-xl shadow-black/40' 
               : 'bg-white/[0.04] backdrop-blur-xs border border-white/15 shadow-lg shadow-black/10'
           }`}
         >
           {/* Brand Logo & Name in ONE Single Horizontal Line */}
           <a
             href="#hero"
-            className="flex items-center space-x-3.5 group text-[#F5F0E5] flex-shrink-0"
+            className="flex items-center space-x-2 sm:space-x-3.5 group text-[#F5F0E5] flex-shrink-0"
           >
             <img 
               src="/assets/icons/logo.png" 
               alt="Shanker Tea" 
-              className="h-9 md:h-10 w-auto object-contain filter drop-shadow group-hover:scale-105 transition-transform duration-300"
+              className="h-8 sm:h-9 md:h-10 w-auto object-contain filter drop-shadow group-hover:scale-105 transition-transform duration-300"
             />
-            <span className="font-serif text-lg md:text-xl font-bold tracking-[0.22em] uppercase text-[#F5F0E5] whitespace-nowrap drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+            <span className="font-serif text-base sm:text-lg md:text-xl font-bold tracking-[0.16em] sm:tracking-[0.22em] uppercase text-[#F5F0E5] whitespace-nowrap drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
               Shanker Tea
             </span>
           </a>

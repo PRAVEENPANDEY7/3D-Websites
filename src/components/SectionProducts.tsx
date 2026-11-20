@@ -231,22 +231,49 @@ export const SectionProducts: React.FC<SectionProductsProps> = ({ onOpenInquiry 
 
         {/* =========================================================================
             3D FLOATING SHOWCASE:
-            LEFT: VARIETY ICONS + COUNTER + 3D POUCH
-            RIGHT: CLEAN REFINED DETAILS & PRICING
+            DESKTOP: VARIETY ON LEFT + 3D POUCH + RIGHT DETAILS
+            MOBILE: RESPONSIVE 4-TAB SWITCHER + POUCH + CONTROLS + DETAILS
             ========================================================================= */}
         <div
           ref={showcaseRef}
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
-          className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center"
+          className="relative grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 xl:gap-16 items-center"
         >
+          {/* Mobile 4-Column Pill Switcher (Visible ONLY on Mobile < md) */}
+          <div className="w-full md:hidden">
+            <div className="grid grid-cols-4 gap-1.5 w-full max-w-sm mx-auto mb-2">
+              {products.map((p, idx) => {
+                const isActive = currentIdx === idx;
+                return (
+                  <button
+                    key={`mob-${p.id}`}
+                    onClick={() => setCurrentIdx(idx)}
+                    className={`flex flex-col items-center justify-center py-2 px-1 rounded-xl transition-all ${
+                      isActive
+                        ? 'bg-gradient-to-r from-[#F7CE68] to-[#E5B544] text-[#0E2015] font-bold shadow-md shadow-[#F7CE68]/20 scale-100'
+                        : 'bg-white/[0.04] text-[#F5F0E5]/75 border border-white/[0.08]'
+                    }`}
+                  >
+                    <span className={`text-[9px] font-mono leading-none ${isActive ? 'text-[#0E2015]/75' : 'text-white/40'}`}>
+                      {p.num}
+                    </span>
+                    <span className="text-xs font-serif font-bold tracking-wider mt-0.5">
+                      {p.shortName}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
           {/* =======================================================================
-              LEFT SIDE: VARIETY SELECTOR + 3D FLOATING TRANSPARENT POUCH
+              LEFT SIDE: VARIETY SELECTOR (DESKTOP) + 3D FLOATING POUCH
               ======================================================================= */}
-          <div className="lg:col-span-6 flex flex-col md:flex-row items-center justify-center gap-6 relative select-none">
+          <div className="lg:col-span-6 flex flex-col md:flex-row items-center justify-center gap-4 sm:gap-6 relative select-none">
             
-            {/* Variety Switcher Tabs: Placed on the LEFT of the packet */}
-            <div className="flex flex-row md:flex-col items-center gap-2 sm:gap-2.5 z-20 shrink-0">
+            {/* Desktop Variety Switcher Tabs: Placed on the LEFT of the packet (Hidden on Mobile) */}
+            <div className="hidden md:flex md:flex-col items-center gap-2 sm:gap-2.5 z-20 shrink-0">
               {products.map((p, idx) => {
                 const isActive = currentIdx === idx;
                 return (
@@ -311,7 +338,7 @@ export const SectionProducts: React.FC<SectionProductsProps> = ({ onOpenInquiry 
             </div>
 
             {/* Pouch Container & 3D Tilt */}
-            <div className="flex-1 flex flex-col items-center justify-center">
+            <div className="flex-1 flex flex-col items-center justify-center w-full">
               {/* 3D Interactive Perspective Wrapper */}
               <div 
                 onMouseMove={handleMouseMove}
@@ -321,7 +348,7 @@ export const SectionProducts: React.FC<SectionProductsProps> = ({ onOpenInquiry 
               >
                 {/* Floating Transparent Pouch */}
                 <div
-                  className={`relative w-full max-w-[250px] sm:max-w-[280px] md:max-w-[310px] xl:max-w-[340px] transition-transform ${
+                  className={`relative w-full max-w-[210px] sm:max-w-[260px] md:max-w-[310px] xl:max-w-[340px] transition-transform ${
                     isHovered ? '' : 'pouch-floating-animation'
                   }`}
                   style={{
@@ -347,8 +374,32 @@ export const SectionProducts: React.FC<SectionProductsProps> = ({ onOpenInquiry 
 
                 {/* Pulsing Floor Shadow for Pure Levitation */}
                 <div 
-                  className="w-44 sm:w-52 h-4 sm:h-5 bg-black/60 rounded-full blur-md mt-4 shadow-pulsing-animation pointer-events-none"
+                  className="w-36 sm:w-48 md:w-52 h-3.5 sm:h-5 bg-black/60 rounded-full blur-md mt-3 sm:mt-4 shadow-pulsing-animation pointer-events-none"
                 />
+
+                {/* Mobile Stepper Controls directly under the pouch (Visible ONLY on Mobile < md) */}
+                <div className="flex md:hidden items-center justify-center gap-3 mt-4 py-1.5 px-3 rounded-full bg-white/[0.05] border border-white/10">
+                  <button
+                    onClick={handlePrev}
+                    aria-label="Previous Tea Variety"
+                    className="w-7 h-7 rounded-full bg-white/[0.08] active:bg-[#F7CE68] active:text-[#0E2015] text-[#F5F0E5] flex items-center justify-center transition-colors"
+                  >
+                    <ChevronLeft className="w-4 h-4" />
+                  </button>
+
+                  <div className="font-mono text-xs uppercase tracking-widest text-[#F7CE68] font-bold px-2">
+                    {currentIdx + 1} / {products.length}
+                  </div>
+
+                  <button
+                    onClick={handleNext}
+                    aria-label="Next Tea Variety"
+                    className="w-7 h-7 rounded-full bg-white/[0.08] active:bg-[#F7CE68] active:text-[#0E2015] text-[#F5F0E5] flex items-center justify-center transition-colors"
+                  >
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                </div>
+
               </div>
             </div>
 
