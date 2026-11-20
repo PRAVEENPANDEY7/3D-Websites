@@ -12,6 +12,7 @@ import {
   Building2,
   HeartHandshake
 } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets.ts';
 
 interface TastingModalProps {
   isOpen: boolean;
@@ -169,7 +170,7 @@ export const TastingModal: React.FC<TastingModalProps> = ({ isOpen, onClose, ini
             {/* Header: Clean Logo & Luxury Brand Title */}
             <div className="text-center mb-4">
               <img 
-                src="/assets/icons/logo.png" 
+                src={getAssetUrl('assets/icons/logo.png')} 
                 alt="Shanker Tea" 
                 className="h-12 sm:h-14 w-auto object-contain mx-auto mb-2 filter drop-shadow-[0_4px_14px_rgba(0,0,0,0.8)]" 
               />

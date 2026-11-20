@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Flame, Sun, Droplets, Wind, Sparkles } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets.ts';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -131,7 +132,7 @@ export const SectionExperience: React.FC = () => {
           <div className="order-1 lg:order-2 lg:col-span-6 xl:col-span-6 flex flex-col items-center justify-center relative my-2 lg:my-0">
             <img
               ref={imageRef}
-              src="/assets/images/steaming-chai-leaf-swirl.png"
+              src={getAssetUrl('assets/images/steaming-chai-leaf-swirl.png')}
               alt="Steaming Chai with Leaf Swirl"
               className="w-full max-w-[280px] sm:max-w-md md:max-w-xl lg:max-w-2xl xl:max-w-3xl h-auto object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.95)]"
               loading="lazy"

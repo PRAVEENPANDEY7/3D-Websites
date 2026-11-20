@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Sparkles } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets.ts';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,7 +28,7 @@ export const SectionWhyShanker: React.FC = () => {
       heading: 'Sustained Mountain Vitality & Focus',
       subtitle: '“Hours of calm, clean energy — with zero caffeine jitters or mid-day crashes.”',
       description: 'Whole high-altitude tea leaves deliver slow-release natural caffeine balanced by L-Theanine, fueling steady physical stamina and effortless morning mental clarity.',
-      image: '/assets/images/tea-leaf-wellness-new.png',
+      image: getAssetUrl('assets/images/tea-leaf-wellness-new.png'),
       alt: 'Shanker Tea Whole Leaf Botanical Science',
     },
     {
@@ -35,7 +36,7 @@ export const SectionWhyShanker: React.FC = () => {
       heading: 'Pure Cellular Longevity & Immunity',
       subtitle: '“Nature’s daily defense shield against environmental stress, fatigue, and aging.”',
       description: 'Tender morning flushes preserve peak concentrations of bioactive catechins, EGCG, and protective plant flavonoids that fortify your cells from within.',
-      image: '/assets/images/benefit-immunity-longevity.png',
+      image: getAssetUrl('assets/images/benefit-immunity-longevity.png'),
       alt: 'Pure Cellular Longevity and Immunity Bioactive Brew',
     },
     {
@@ -43,7 +44,7 @@ export const SectionWhyShanker: React.FC = () => {
       heading: 'Cardiovascular & Digestive Harmony',
       subtitle: '“Gentle circulatory warmth and soothing metabolic balance in every sip.”',
       description: 'Active tea polyphenols promote arterial elasticity and healthy blood flow, while gentle thermogenic warmth harmonizes your natural digestive equilibrium.',
-      image: '/assets/images/benefit-digestive-harmony.png',
+      image: getAssetUrl('assets/images/benefit-digestive-harmony.png'),
       alt: 'Cardiovascular and Digestive Harmony with Indian Terroir Herbs',
     },
   ];

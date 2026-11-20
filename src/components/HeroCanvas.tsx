@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { getAssetUrl } from '../utils/assets.ts';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,7 +30,7 @@ export const HeroCanvas: React.FC<HeroCanvasProps> = ({ onProgressUpdate, onInit
   // Get frame image URL
   const getFrameUrl = (index: number) => {
     const frameNumber = String(index + 1).padStart(4, '0');
-    return `/assets/tea-sequence/frame_${frameNumber}.jpg`;
+    return getAssetUrl(`assets/tea-sequence/frame_${frameNumber}.jpg`);
   };
 
   // High-Quality Native Retina Render

@@ -9,6 +9,7 @@ import {
   X,
   Compass
 } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets.ts';
 
 interface NavbarProps {
   onOpenInquiry: () => void;
@@ -70,7 +71,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInquiry }) => {
             className="flex items-center space-x-2 sm:space-x-3.5 group text-[#F5F0E5] flex-shrink-0"
           >
             <img 
-              src="/assets/icons/logo.png" 
+              src={getAssetUrl('assets/icons/logo.png')} 
               alt="Shanker Tea" 
               className="h-8 sm:h-9 md:h-10 w-auto object-contain filter drop-shadow group-hover:scale-105 transition-transform duration-300"
             />

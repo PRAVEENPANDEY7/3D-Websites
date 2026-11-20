@@ -10,6 +10,7 @@ import {
   Flame,
   Sun
 } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets.ts';
 
 interface ProductItem {
   id: string;
@@ -51,7 +52,7 @@ export const SectionProducts: React.FC<SectionProductsProps> = ({ onOpenInquiry 
       name: 'Shanker Premium CTC Tea',
       tagline: 'RICH • STRONG • AROMATIC',
       description: 'Whole-grain CTC blended with golden tips for a brisk, rich morning brew.',
-      image: '/assets/images/product-premium-ctc.png',
+      image: getAssetUrl('assets/images/product-premium-ctc.png'),
       accentColor: '#F7CE68',
       glowColor: 'rgba(42, 90, 59, 0.55)',
       pricing: {
@@ -69,7 +70,7 @@ export const SectionProducts: React.FC<SectionProductsProps> = ({ onOpenInquiry 
       name: 'Shanker Kadak Chai Patti',
       tagline: 'EXTRA STRONG BLEND',
       description: 'High-grown granular leaves crafted for an intense, full-bodied kadak chai.',
-      image: '/assets/images/product-kadak-chai.png',
+      image: getAssetUrl('assets/images/product-kadak-chai.png'),
       accentColor: '#C26A41',
       glowColor: 'rgba(122, 32, 33, 0.55)',
       pricing: {
@@ -87,7 +88,7 @@ export const SectionProducts: React.FC<SectionProductsProps> = ({ onOpenInquiry 
       name: 'Shanker Adrak Chai Patti',
       tagline: 'WITH NATURAL GINGER',
       description: 'Sun-dried ginger root infused with brisk mountain tea for spicy warmth.',
-      image: '/assets/images/product-adrak-chai.png',
+      image: getAssetUrl('assets/images/product-adrak-chai.png'),
       accentColor: '#F7CE68',
       glowColor: 'rgba(184, 122, 30, 0.55)',
       pricing: {
@@ -105,7 +106,7 @@ export const SectionProducts: React.FC<SectionProductsProps> = ({ onOpenInquiry 
       name: 'Shanker Elaichi Chai Patti',
       tagline: 'WITH NATURAL CARDAMOM',
       description: 'Crushed green cardamom pods giving a sweet, royal aroma to brisk leaves.',
-      image: '/assets/images/product-elaichi-chai.png',
+      image: getAssetUrl('assets/images/product-elaichi-chai.png'),
       accentColor: '#68B984',
       glowColor: 'rgba(63, 116, 76, 0.55)',
       pricing: {
