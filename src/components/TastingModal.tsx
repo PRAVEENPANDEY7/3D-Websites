@@ -72,18 +72,20 @@ export const TastingModal: React.FC<TastingModalProps> = ({ isOpen, onClose, ini
     setSubmitted(true);
   };
 
+  const whatsappPhone = import.meta.env.VITE_WHATSAPP_NUMBER || '919876543210';
+
   const handleWhatsAppPersonal = () => {
     const text = encodeURIComponent(
       `Hello Shanker Tea Estate,\n\nI would like to place a Personal Harvest Order:\n• Blend: ${personalBlend}\n• Pack Size: ${personalWeight}\n• Name: ${personalName || 'Tea Lover'}\n• City: ${personalCity || 'India'}${personalNotes ? `\n• Special Request: ${personalNotes}` : ''}\n\nPlease share price quote & delivery timeline.`
     );
-    window.open(`https://wa.me/919876543210?text=${text}`, '_blank');
+    window.open(`https://wa.me/${whatsappPhone}?text=${text}`, '_blank');
   };
 
   const handleWhatsAppWholesale = () => {
     const text = encodeURIComponent(
       `Hello Shanker Tea Wholesale Desk,\n\nWe would like to inquire about Wholesale / Bulk Supply:\n• Business/Outlet: ${businessName || 'Business Outlet'}\n• Blend Required: ${wholesaleBlend}\n• Monthly Volume: ${monthlyVolume}\n• Contact Person: ${contactPerson || 'Authorized Representative'}\n• Location: ${businessCity || 'India'}\n\nPlease share your Wholesale Price Catalog & Sample details.`
     );
-    window.open(`https://wa.me/919876543210?text=${text}`, '_blank');
+    window.open(`https://wa.me/${whatsappPhone}?text=${text}`, '_blank');
   };
 
   const handleResetAndClose = () => {

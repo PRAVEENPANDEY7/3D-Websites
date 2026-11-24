@@ -171,7 +171,7 @@ export const SectionFinalBrand: React.FC<SectionFinalBrandProps> = ({ onOpenInqu
                 <Share2 className="w-3.5 h-3.5" />
               </a>
               <a
-                href="#brand"
+                href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL || 'contact@shankertea.com'}`}
                 aria-label="Email"
                 className="w-9 h-9 rounded-full border border-[#C7A66A]/30 flex items-center justify-center text-[#F5F0E5]/80 hover:text-[#C7A66A] hover:border-[#C7A66A] transition-all"
               >
